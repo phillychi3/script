@@ -1,0 +1,1 @@
+find . -type d -name ".git" -exec dirname {} \; | while read dir; do echo "Pulling $dir" && cd "$dir" && git --no-pager pull && cd - > /dev/null; done
